@@ -1,0 +1,151 @@
+*{
+   box-sizing: border-box;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+  
+body {
+  background-color: #f1f1f1 !important;
+}
+header{
+  display: block;
+  background-color: #D4E3FC;
+  width: 100%;
+  height: 70px;
+}
+#regForm {
+  background-color: #ffffff;
+  margin: 100px auto;
+  font-family: Raleway;
+  padding: 40px;
+  width: 70%;
+  min-width: 300px;
+}
+  
+h1 {
+  text-align: center;  
+}
+  
+.not-check-input{
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+  border-radius: 40px;
+    
+}
+input,textarea,select{
+  background-color: #D4E3FC;
+  margin-left: 20px;
+}
+  /* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+.HW{
+  border-radius: 40px;
+  width:85px;
+  height: 30px;
+  border: 1px solid #aaaaaa; 
+  margin-left: 30px;
+}
+.veg{
+  display: flex;
+  gap:30px;
+}
+.radio-opt{
+  width :70px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+.opt{
+  display: flex;
+  padding-left: 0;
+  width: auto;
+  gap: 10px;
+}
+.medical-data{
+  display: flex;
+  gap: 50%;
+}
+.medical-data-col{
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+}
+.diagnosis-checkboxes{
+  display: flex;
+  width: 100%;
+  gap:50px;
+  margin-top: 50px;
+  margin-left: 30px;
+}
+ .diagnosis-checkboxes-col{
+  display: flex;
+  flex-direction: column;
+  gap: 20px
+ }
+ .send-medical-info{
+  width: 400px;
+  margin-top: 80px;
+  display: flex;
+ }
+ .send-medical-info > p{
+  display: flex;
+  justify-content: left;
+
+ }
+.personal-info{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 80px;
+  margin-top: 25px;
+}
+  /* Hide all steps by default: */
+.tab {
+  display: none;
+}
+  
+button {
+  background-color: #04AA6D;
+  color: #ffffff;
+  border: none;
+  border-radius: 40px;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+  
+button:hover {
+  opacity: 0.8;
+}
+  
+#prevBtn {
+  background-color: #bbbbbb;
+}
+  
+  /* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+  
+.step.active {
+  opacity: 1;
+}
+  
+  /* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #04AA6D;
+}
