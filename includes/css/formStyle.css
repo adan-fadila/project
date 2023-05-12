@@ -5,15 +5,28 @@
   margin: 0;
   padding: 0;
 }
-  
+
+header, main, footer, nav, aside, section, div  {
+
+  display: block;
+
+}
 body {
   background-color: #f1f1f1 !important;
 }
 header{
-  display: block;
   background-color: #D4E3FC;
   width: 100%;
   height: 70px;
+}
+#logo{
+  background-image: url("../images/logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 80px;
+  width: 80px;
+  display: block;  
+  
 }
 #regForm {
   background-color: #ffffff;
@@ -21,6 +34,7 @@ header{
   font-family: Raleway;
   padding: 40px;
   width: 70%;
+  height: 70%;
   min-width: 300px;
 }
   
@@ -35,18 +49,22 @@ h1 {
   font-family: Raleway;
   border: 1px solid #aaaaaa;
   border-radius: 40px;
+  width:  50%;
     
 }
 input,textarea,select{
-  background-color: #D4E3FC;
+  background-color: #f1f1f1 ;
+  border-style: dotted;
+  border-radius: 20px ;
+  text-align: center;
   margin-left: 20px;
 }
   /* Mark input boxes that gets an error on validation: */
 input.invalid {
   background-color: #ffdddd;
 }
+
 .HW{
-  border-radius: 40px;
   width:85px;
   height: 30px;
   border: 1px solid #aaaaaa; 
@@ -71,11 +89,18 @@ input.invalid {
 .medical-data{
   display: flex;
   gap: 50%;
+  margin-top: 15px;
 }
 .medical-data-col{
   display: flex;
   flex-direction: column;
   gap:30px;
+}
+.diagnosis{
+  display: flex;
+  justify-content: space-between;
+  /* width: 90%; */
+  font-size: large;
 }
 .diagnosis-checkboxes{
   display: flex;
@@ -90,15 +115,12 @@ input.invalid {
   gap: 20px
  }
  .send-medical-info{
-  width: 400px;
-  margin-top: 80px;
+  width: 50%;
   display: flex;
+  margin-top: 10px;
+  font-weight: 700;
  }
- .send-medical-info > p{
-  display: flex;
-  justify-content: left;
 
- }
 .personal-info{
   display: grid;
   grid-template-columns: auto auto;
@@ -108,25 +130,34 @@ input.invalid {
   /* Hide all steps by default: */
 .tab {
   display: none;
+  font-size: large;
 }
-  
+.form-btn{
+  overflow:auto;
+}
 button {
   background-color: #04AA6D;
   color: #ffffff;
   border: none;
-  border-radius: 40px;
   padding: 10px 20px;
   font-size: 17px;
   font-family: Raleway;
   cursor: pointer;
 }
-  
+.btn-n-p{
+  margin-top: 50px;
+} 
+#nextBtn{
+  float: right;
+  border-radius: 20px;
+}
 button:hover {
   opacity: 0.8;
 }
   
 #prevBtn {
   background-color: #bbbbbb;
+  border-radius: 20px;
 }
   
   /* Make circles that indicate the steps of the form: */

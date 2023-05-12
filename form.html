@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<htm>
+<html>
     <head>
         <title>form</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,9 @@
     </head>
     <body>
       <header>
-
+        <a href="#" id="logo">
+          
+        </a>
       </header>
         <form id="regForm" action="/action_page.php">
             <h1>Request New Treatment:</h1>
@@ -21,7 +23,7 @@
 
                   <div>
                     Full Name:
-                    <p><input class="not-check-input" value="Amal" name="fname" disabled></p>
+                    <p><input class="not-check-input" value="Amal Fadial" name="fname" disabled></p>
 
                     Birthday Date
                     <p><input class="not-check-input" type="date" value="2002-01-09" name="Bdate" disabled></p>
@@ -52,34 +54,41 @@
             
             </div>
 
-            <div class="tab">choose your diagnosis:
-              <div class="diagnosis-checkboxes">
+            <div class="tab">
+              <h4>Diagnosis</h4>
+              your diagnosis:
+              <div class="diagnosis">
+                <span></span>
+                <div class="diagnosis-checkboxes">
 
-                <div class="diagnosis-checkboxes-col">
-                  <div class="diagnosis-opt"><input type="checkbox" name="diagnosis" value="Vitamin D"> Vitamin D</div>
-                  <div class="diagnosis-opt"><input type="checkbox" name="diagnosis" value="Vitamin A"> Vitamin A</div>
-                </div>
+                  <div class="diagnosis-checkboxes-col">
+                    <div class="diagnosis-opt"><input type="checkbox" name="diagnosis" value="Vitamin D"> Vitamin D</div>
+                    <div class="diagnosis-opt"><input type="checkbox" name="diagnosis" value="Vitamin A"> Vitamin A</div>
+                  </div>
 
-                <div class="diagnosis-checkboxes-col">
-                  <div class="diagnosis-opt"><input type="checkbox" name="diagnosis" value="Fat"> Fat</div>
-                  <div class="diagnosis-opt"><input type="checkbox" name="diagnosis" value="Vitamin C"> Vitamin C</div>
-                </div>
+                  <div class="diagnosis-checkboxes-col">
+                    <div class="diagnosis-opt"><input type="checkbox" name="diagnosis" value="Fat"> Fat</div>
+                    <div class="diagnosis-opt"><input type="checkbox" name="diagnosis" value="Vitamin C"> Vitamin C</div>
+                  </div>
 
-                <div class="diagnosis-checkboxes-col">
-                  <div class="diagnosis-opt"><input type="checkbox" name="diagnosis" value="diabetes"> diabetes</div>
-                  <div class="diagnosis-opt"><input type="checkbox" name="diagnosis" value="Vitamin B12"> Vitamin B12</div>
-                </div>
-                
+                  <div class="diagnosis-checkboxes-col">
+                    <div class="diagnosis-opt"><input type="checkbox" name="diagnosis" value="diabetes"> diabetes</div>
+                    <div class="diagnosis-opt"><input type="checkbox" name="diagnosis" value="Vitamin B12"> Vitamin B12</div>
+                  </div>
               </div>
-              <div class="send-medical-info">
-                <p>
+               <div class="send-medical-info">
+                <div>
                   by accepting this you give us authority to condition to help you in the best way.agree to send medical information 
                   <input type="checkbox" value="agree" name="send-medical-info">
-                </p>
-              </div> 
+                </div>
+              </div>
+                
+              </div>
+              
             </div>
 
-            <div class="tab">Medical Data:
+            <div class="tab">
+              <h4>Medical Data:</h4>
               <div class="medical-data">
                 <div class="medical-data-col">
                   <div>treatment method
@@ -98,10 +107,9 @@
                   </select>
                 </div>
                
-                  what type of food do you like
-                  <textarea></textarea>
+                what type of food do you like
+                <textarea cols="30" rows="3"></textarea>
                
-                
               </div>
               <div class="medical-data-col">
                 <div> weight <input class="HW" name="weight"></div>
@@ -112,24 +120,22 @@
               
               
             </div>
-            <div class="tab"><h3>Last step:</h3>
+            <div class="tab"><h4>Last step:</h4>
               comments<br>
-              <textarea></textarea>
+              <textarea cols="50" rows="9"></textarea>
             </div>
-            <div style="overflow:auto;">
-              <div style="float:right;">
+            <div class="form-btn">
+              <div class="btn-n-p">
                 <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
                 <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
               </div>
             </div>
-            <!-- Circles which indicates the steps of the form: -->
             <div style="text-align:center;margin-top:40px;">
               <span class="step"></span>
               <span class="step"></span>
               <span class="step"></span>
               <span class="step"></span>
             </div>
-          </form>
-          
+          </form> 
     </body>
-</htm>
+</html>
