@@ -1,9 +1,71 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <title>treatment</title>
+        <link rel="stylesheet" href="includes/css/globalStyle.css">
     </head>
     <body>
-        
+        <header>
+            <nav class="hamburger-menu" id="hamburger-menu" onclick="openBar()">
+              <i class="fa-solid fa-bars fa-2xl"></i>
+              <ul class="bar-active" id="bar-active">
+                 <li class="bar-active-item">
+                    <a href="#">Home</a>
+                 </li>
+                 <li class="bar-active-item">
+                    <a href="#">treatments List</a>
+                 </li>
+                 <li class="bar-active-item">
+                    <a href="#">treatment plan</a>
+                 </li>
+                 <li class="bar-active-item">
+                    <a href="#">New Treatment Request</a>
+                 </li>
+              </ul>
+            </nav>
+            <a href="#" id="logo"> </a>
+            <nav class="web-nav">
+              
+              <ul class="web-nav-list">
+                <li class="web-nav-list-item"><a href="#">Home</a></li>
+                <li class="web-nav-list-item"><a href="#">treatments List</a></li>
+                <li class="web-nav-list-item"><a href="#">treatment plan</a></li>
+                <li class="web-nav-list-item"><a class="active" href="#">New Treatment Request</a></li>
+              </ul>
+            </nav>
+            
+    
+            <a href="#" class="profile"></a>
+    
+          </header>
+          <div id="wrapper">
+            <div class="up">
+                <h1>Treatment 1 plan</h1>
+                <h1>01/12/2023</h1>
+            </div>
+            <section class="breakfast">
+                breakfast
+                <ul class="plan-list">
+                    <li class="plan-list-item">Tofu<input type="checkbox"></li>
+                    <li class="plan-list-item">toast<input type="checkbox"></li>
+                    <li class="plan-list-item"> slice of vegan cheese<input type="checkbox"></li>
+                </ul>
+            </section>
+            <section class="lunch">
+                lunch
+                <ul class="plan-list">
+                    <li class="plan-list-item">Tofu<input type="checkbox"></li>
+                    <li class="plan-list-item">toast<input type="checkbox"></li>
+                    <li class="plan-list-item"> slice of vegan cheese<input type="checkbox"></li>
+                </ul>
+            </section>
+            <section class="dinner">
+                <ul class="plan-list">
+                    <li class="plan-list-item">Tofu<input type="checkbox"></li>
+                    <li class="plan-list-item">toast<input type="checkbox"></li>
+                    <li class="plan-list-item"> slice of vegan cheese<input type="checkbox"></li>
+                </ul>
+            </section>
+          </div>
     </body>
 </html>
