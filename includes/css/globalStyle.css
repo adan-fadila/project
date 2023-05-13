@@ -27,10 +27,12 @@ header{
     display: block;  
     margin-top: 5px;
   }
-nav{
+.web-nav{
     display: flex;
     gap:30px;
     margin-top: 10px;
+
+
 }
 body {
     background-color: #f1f1f1 !important;
@@ -55,26 +57,55 @@ a{
     color: white;
     font-weight: bold;
   }
-  ul {
+  li {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
+
   }
   
-  li {
+  .web-nav-list-item {
     float: left;
   }
   
-  li a {
+  .web-nav-list-item > a {
     display: block;
     color:  #f1f1f1;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-size: x-large;
   }
-  
-  /* Change the link color to #111 (black) on hover */
+  .bar-active-item{
+    height: 100%;
+    width: 100%;
+  }
+  .bar-active-item > a{
+    display: block;
+    text-align:justify;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-size: x-large;
+  }
   li a:hover {
     background-color: #cddaf2;
   }
+
+ .hamburger-menu{
+  position: absolute;
+  display: none;
+ }
+.bar-active{
+  display: none;
+
+}
+.open{
+  display: flex;
+  flex-direction: column;
+  background-color: #e5e4e4;
+  justify-content: space-around;
+  height: 600px;
+  width: 300px;
+}
