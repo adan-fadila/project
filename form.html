@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="includes/css/globalStyle.css">
         <link rel="stylesheet" href="includes/css/formStyle.css">
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="includes/js/globalScript.js"></script>
         <script src="includes/js/formScript.js"></script>
     </head>
     <body>
@@ -19,32 +20,35 @@
                 <a href="#">Home</a>
              </li>
              <li class="bar-active-item">
-                <a href="#">treatments List</a>
+                <a href="#">Treatments List</a>
              </li>
              <li class="bar-active-item">
-                <a href="#">treatment plan</a>
+                <a href="mainObject.html">Treatment plan</a>
              </li>
              <li class="bar-active-item">
-                <a href="#">New Treatment Request</a>
+                <a class="active" href="#">New Treatment Request</a>
              </li>
           </ul>
         </nav>
+
         <a href="#" id="logo"> </a>
-        <nav class="web-nav">
-          
+
+        <nav class="web-nav">   
           <ul class="web-nav-list">
             <li class="web-nav-list-item"><a href="#">Home</a></li>
-            <li class="web-nav-list-item"><a href="#">treatments List</a></li>
-            <li class="web-nav-list-item"><a href="#">treatment plan</a></li>
+            <li class="web-nav-list-item"><a href="#">Treatments List</a></li>
+            <li class="web-nav-list-item"><a href="mainObject.html">Treatment plan</a></li>
             <li class="web-nav-list-item"><a class="active" href="#">New Treatment Request</a></li>
           </ul>
         </nav>
-        
-
-        <a href="#" class="profile"></a>
-
+        <div class="header-right">
+          <a href="#"class="messege"><i class="fa-solid fa-message fa-lg" style="color: #ffffff;"></i></a>
+          <a href="#" class="profile"></a>
+          
+        </div>
       </header>
-        <form id="regForm" action="/action_page.php">
+
+        <form id="regForm" action="getForm.php" method="post">
             <h1>Request New Treatment:</h1>
             <!-- One "tab" for each step in the form: -->
             <div class="tab">
@@ -53,10 +57,10 @@
 
                   <div>
                     Full Name:
-                    <p><input class="not-check-input" value="Amal Fadial" name="fname" disabled></p>
+                    <p><input class="not-check-input form-control" value="Amal Fadial" name="fname" disabled></p>
 
                     Birthday Date
-                    <p><input class="not-check-input" type="date" value="2002-01-09" name="Bdate" disabled></p>
+                    <p><input class="not-check-input form-control" type="date" value="2002-01-09" name="Bdate" disabled></p>
 
                     Gender:
                     <div class="radio-opt">
@@ -68,9 +72,9 @@
 
                   <div>
                     ID
-                    <p><input class="not-check-input number-input" type="text" value="12345678" name="ID" disabled></p>
+                    <p><input class="not-check-input number-input form-control" type="text" value="12345678" name="ID" disabled></p>
                     Email
-                    <p><input class="not-check-input" value="amal@gmail.com" name="email" disabled></p>
+                    <p><input class="not-check-input form-control" value="amal@gmail.com" name="email" disabled></p>
 
                     First Treatment:
                     <div class="radio-opt">
@@ -109,7 +113,7 @@
                <div class="send-medical-info">
                 <div>
                   by accepting this you give us authority to condition to help you in the best way.agree to send medical information 
-                  <input type="checkbox" value="agree" name="send-medical-info">
+                  <input type="checkbox" value="agree" name="send-medical-info" class="send-medical-info-check">
                 </div>
               </div>
                 
@@ -122,14 +126,14 @@
               <div class="medical-data">
                 <div class="medical-data-col">
                   <div>treatment method
-                    <select id="method" name="method">
+                    <select id="method" name="method" class="form-select">
                       <option value="Diet">Diet</option>
                       <option value="Sport">Sport</option>
                     </select>
                 </div>
                 <div>
                    allergies
-                  <select id="allergies" name="allergies"  class="dropup">
+                  <select id="allergies" name="allergies"  class="dropup form-select">
                     <option value="Egg">egg
                     <option value="oat">oat</option>
                     <option value="fish">fish</option>
@@ -138,12 +142,12 @@
                 </div>
                
                 what type of food do you like
-                <textarea cols="30" rows="3"></textarea>
+                <textarea cols="30" rows="3" name="preferFood" class="form-control"></textarea>
                
               </div>
               <div class="medical-data-col">
-                <div> weight <input class="HW number-input" name="weight"></div>
-                <div>height <input class="HW number-input" name="height"></div>
+                <div> weight <input class="HW number-input form-control" name="weight"></div>
+                <div>height <input class="HW number-input form-control" name="height"></div>
                 <div class="veg"> <label>vegetarian</label> <input name="vegetarian" type="checkbox"></div>
               </div>
             </div>
@@ -152,9 +156,9 @@
             </div>
             <div class="tab"><h4>Last step:</h4>
               <div class="last-step">
-                <div>
+                <div class="text">
                   comments<br>
-                  <textarea cols="50" rows="9"></textarea>
+                  <textarea cols="50" rows="9" name="comments" class="form-control" ></textarea>
                 </div>
                 <div class="aside-img">
                   <img src="includes/images/aside.png" alt="aside">
@@ -176,5 +180,10 @@
               <span class="step"></span>
             </div>
           </form> 
+          <footer>
+            <ul class="setting">
+              <li><a href="#"><i class="fa-solid fa-gear"></i></a></li>
+              <li><a href="#"><i class="fa-solid fa-circle-question"></i></a></li>
+          </footer>
     </body>
 </html>

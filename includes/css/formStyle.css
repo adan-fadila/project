@@ -10,7 +10,7 @@
   padding: 40px;
   width: 70%;
   
-  min-width: 300px;
+  /* min-width: 300px; */
 }
   
 h1 {
@@ -22,15 +22,17 @@ h1 {
   width: 100%;
   font-size: 17px;
   font-family: Raleway;
-  border: 1px solid #aaaaaa;
-  border-radius: 20px;
-  width:  50%;
+  /* border: 1px solid #aaaaaa; */
+  /* border-radius: 20px; */
+  width:  70%;
     
+}
+.form-select{
+  width:50%;
 }
 input,textarea,select{
   background-color: #f1f1f1 ;
-  border-style: dotted;
-  border-radius: 20px ;
+  /* border-radius: 20px ; */
   text-align: center;
   margin-left: 20px;
 }
@@ -66,7 +68,7 @@ input.invalid {
 }
 .medical-data{
   display: flex;
-  gap: 50%;
+  justify-content: space-between;
   margin-top: 15px;
 }
 .medical-data-col{
@@ -76,9 +78,9 @@ input.invalid {
 }
 .diagnosis{
   display: flex;
-  justify-content: space-between;
-  /* width: 90%; */
-  font-size: large;
+  justify-content: space-around;
+  width: 90%;
+  
 }
 .diagnosis-checkboxes{
   display: flex;
@@ -102,15 +104,15 @@ input.invalid {
 .personal-info{
   display: grid;
   grid-template-columns: auto auto;
-  gap: 80px;
+  gap: 100px;
   margin-top: 25px;
   margin-left: 100px;
 }
   /* Hide all steps by default: */
 .tab {
   display: none;
-  font-size: large;
-  height: 350px;
+  font-size: x-large;
+  height: 450px;
 }
 .form-btn{
   overflow:auto;
@@ -173,24 +175,18 @@ button:hover {
 }
 
 @media only screen and (max-width: 799px){
-  .hamburger-menu{
-    position:relative;
-    display: block;
-    margin-top: 15px;
-  }
-
-  .web-nav{
-    display: none;
-  }
+  
   .personal-info{
     display: flex;
     flex-direction: column;
     gap:15px;
     margin-left: 0;
     margin-top: 25px;
-    width: 700px;
+  
+    width: 100%;
     font-size: x-large;
   }
+  
   .diagnosis{
     display: flex;
     flex-direction: column;
@@ -199,17 +195,22 @@ button:hover {
     width: 100%;
     font-size: x-large;
   }
+  .diagnosis-checkboxes{
+    display: flex;
+    flex-direction: column;
+  }
   .send-medical-info{
     width: 100%;
   }
   .tab{
-    height:1000px;
+    height:100%;
     width: 100%;
   }
   .medical-data{
+    
     display: flex;
     flex-direction: column;
-    gap: 160px;
+    gap: 130px;
     margin-left: 0;
     margin-top: 25px;
     width: 100%;
@@ -226,31 +227,31 @@ button:hover {
     
     font-size: x-large;
   }
+  .text{
+    display: flex;
+  }
+
   #regForm{
     padding: auto;
-    width: 100%;
-    
+    width: 100%;  
     margin: auto ;
+  }
+  footer{
+    background-color: #ffffff;
+    margin: 0;
+    display: none;
   }
   
  }
 @media only screen and ((min-width: 800px) and (max-width: 1250px )){
-  .hamburger-menu{
-    position:relative;
-    display: block;
-    margin-top: 15px;
-  }
-
-  .web-nav{
-    display: none;
-  }
+  
   .personal-info{
     display: flex;
     flex-direction: column;
     gap:15px;
     margin-left: 0;
     margin-top: 25px;
-    width: 700px;
+    width: 100%;
     font-size: x-large;
   }
   .diagnosis{
@@ -265,7 +266,7 @@ button:hover {
     width: 100%;
   }
   .tab{
-    height: 700px;
+    height: 100%;
   }
   .medical-data{
     display: flex;
@@ -275,17 +276,20 @@ button:hover {
     margin-top: 25px;
     width: 100%;
     font-size: x-large;
-  }.aside-img{
-    position: absolute;
-    display: none;
   }
   .last-step{
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-top: 30%;
-    
     font-size: x-large;
+  }
+  .text{
+    display: flex;
+  }
+  .aside-img{
+    position: absolute;
+    display: none;
   }
   
  }

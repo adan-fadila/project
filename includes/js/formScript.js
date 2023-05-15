@@ -1,5 +1,5 @@
  let currentTab = 0;
- 
+ let levelTitle = ["personal information","diagnosis","medical data","last step"]
 window.onload = function(){
     showTab(currentTab);
 };
@@ -8,6 +8,8 @@ function showTab(n) {
   // This function will display the specified tab of the form...
   let x = document.getElementsByClassName("tab");
   x[n].style.display = "block";
+  // let level = document.getElementById("level");
+  // level.append(" " + levelTitle[currentTab]);
   //... and fix the Previous/Next buttons:
   if (n == 0) {
     document.getElementById("prevBtn").style.display = "none";
@@ -24,21 +26,14 @@ function showTab(n) {
 }
 
 function nextPrev(n) {
-  // This function will figure out which tab to display
   let x = document.getElementsByClassName("tab");
-  // Exit the function if any field in the current tab is invalid:
   if (n == 1 && !validateForm()) return false;
-  // Hide the current tab:
   x[currentTab].style.display = "none";
-  // Increase or decrease the current tab by 1:
   currentTab = currentTab + n;
-  // if you have reached the end of the form...
   if (currentTab >= x.length) {
-    // ... the form gets submitted:
     document.getElementById("regForm").submit();
     return false;
   }
-  // Otherwise, display the correct tab:
   showTab(currentTab);
 }
 function validStringInput(inputs){
@@ -84,6 +79,7 @@ function validDiagnosis(inputs){
   }
   return false;
 }
+
 function validateForm() {
  
   let x, valid = true;
@@ -91,8 +87,9 @@ function validateForm() {
   let stringInput = x[currentTab].getElementsByClassName("string-input");
   let numbergInput = x[currentTab].getElementsByClassName("number-input");
   let diagnosisInput = x[currentTab].getElementsByClassName("diagnosis-check");
+  let sendInfo = x[currentTab].getElementsByClassName("send-medical-info-check");
 
-  valid = validStringInput(stringInput) && validNumberInput(numbergInput) && validDiagnosis(diagnosisInput);
+  valid = validStringInput(stringInput) && validNumberInput(numbergInput) && validDiagnosis(diagnosisInput)&& validDiagnosis(sendInfo);
   if (valid) {
     document.getElementsByClassName("step")[currentTab].className += " finish";
   }
@@ -106,11 +103,4 @@ function fixStepIndicator(n) {
   }
   x[n].className += " active";
 }
-function openBar(){
-    if(document.getElementById("bar-active").classList.contains("open")){
-      document.getElementById("bar-active").classList.remove("open");
-    }
-    else{
-      document.getElementById("bar-active").classList.add("open");
-    }
-};
+
