@@ -136,4 +136,7 @@ a{
   .web-nav{
     display: none;
   }
+  footer{
+    display: none;
+  }
 }
